@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap');
+
+
+:root{
+    --clara1: #d2beb0;
+    --clara2: #b8a69a;
+    --clara3: #bb9684;
+    --clean-white: #f9f9f9;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia';
+    font-weight: 400;
+    overflow-x: hidden;
+    font-size: 16px;
+    text-align: justify;
+    color: #333;
+}
+
+.header {
+    position: relative;
+    width: 100vw;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.img_header {
+    width: 20em;
+    z-index: 1;
+}
+
+.options_list {
+    display: inline-flex;
+    justify-content: space-between;
+    margin-left: 10em;
+    z-index: 2;
+    position: relative;
+}
+
+li {
+    list-style-type: none;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.text_list_header {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.text_list_header:hover {
+    color: lightgray;
+}
+
+.main {
+    width: 100%;
+    height: 723px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d2beb0;
+}
+
+.img_bg {
+    width: 100vw;
+    height: 800px;
+    filter: brightness(20%);
+    position: absolute;
+    z-index: auto;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.center_text {
+    margin: 10em 0;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.title_text {
+    position: relative;
+    z-index: auto;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.title_p {
+    position: relative;
+    z-index: auto;
+}
+
+.btn_contact {
+    position: relative; /* Adiciona a posição relativa */
+    z-index: 2; /* Ajusta o z-index para que o botão fique acima da imagem de fundo */
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #34465c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: solid white 1px;
+}
+
+.btn_contact:hover {
+    background-color: #555;
+}
+
+.the_office {
+    background-color: #d2beb0;
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.the_office h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.the_office p {
+    color: #333;
+    font-size: 20px;
+    max-width: 800px;
+    text-indent: 20px;
+    margin: 20px auto;
+}
+
+.footer {
+
+    position: relative;
+    z-index: 1;
+}
+
+.about_us {
+    background-color: #b8a69a;
+    padding: 50px;
+}
+
+.about_us h2 {
+    text-align: center;
+    color:#333;
+    margin-bottom: 50px;
+}
+
+.about_us h3{
+    color: #333;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 200px;
+    height: 500px;
+    perspective: 1000px;
+    margin: 20px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: white;
+}
+
+.card-back {
+    background-color: #34465c;
+    color: white;
+    transform: rotateY(180deg);
+    transform-origin: center; /* Adicione esta linha */
+}
+
+.card-back p {
+    padding: 0 20px; /* Adicione margem interna para o texto na parte de trás do card */
+    margin: 0; /* Remova a margem padrão do parágrafo */
+}
+
+.our_services {
+    background-color: #f9f9f9;
+    padding: 50px;
+    text-align: center;
+}
+
+.our_services h2 {
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    gap: 40px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.service-button {
+    width: 200px;
+    height: 200px;
+    padding: 15px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.service-button:hover {
+    background-color: #555;
+}
+
+.advogados {
+    background-color: var(--clara1);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa as dimensões */
+}
+
+.swiper-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa as dimensões */
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.5s ease; /* Adicione uma transição suave à transformação */
+}
+
+.swiper-container::before,
+.swiper-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20px; /* Largura da sombra nos lados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adicione sombra apenas nos lados direito e esquerdo */
+}
+
+.swiper-container::before {
+    left: 0;
+    margin-left: -20px;
+}
+
+.swiper-container::after {
+    right: 0;
+    margin-right: -20px;
+}
+
+.swiper-slide {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 50px;
+}
+
+
+.advogados h2{
+    color: #333;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+.advogado-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    height: 100%;
+}
+
+.advogado-foto img {
+    height: 500px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.advogado-nome {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.advogado-descricao {
+    font-size: 14px;
+    text-align: justify;
+    margin: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000; /* Ajuste conforme necessário */
+    background-color: var(--clean-white); /* Cor de fundo do botão */
+    color: var(--clara3); /* Cor do texto do botão */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.map_info_container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--clara3);
+}
+
+.map_info_container h2{
+    padding-top: 50px;
+}
+
+.map_info {
+    display: flex;
+    justify-content: center;
+    padding: 0 50px 50px 50px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    position: relative;
+}
+
+.contact {
+    background-color: #34465c;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    position: relative;
+}
+
+.contact-form {
+    min-width: 500px;
+    box-sizing: border-box;
+    margin-right: 15px;
+    background-color: var(--clara2);
+    padding: 40px;
+    height: 420px;
+    position: relative;
+    left: 45px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.contact-form h2{
+    text-align: center;
+    margin-top: 0;
+}
+
+.contact-info {
+    margin-left: 15px ;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.info-container {
+    display: inline-grid;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 10px;
+    position: relative;
+    left: -45px;
+}
+
+.form-block {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #34465c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.info-separate{
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-block {
+    width: 180px;
+    height: 180px;
+    background-color: var(--clean-white);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 0;
+}
+
+.img_contact{
+    margin-bottom: 22px;
+}
+
+.map{
+    padding: 5em 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mapbox{
+    position: relative;
+    left: 45px;
+    min-width: 500px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.clickable-text {
+    cursor: pointer;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 5px 0;
+    display: none;
+}
+
+.fixed-header img {
+    width: 10em;
+}
+
+.fixed-header.visible {
+    z-index: 3;
+    display: flex;
+    animation: fadeInDown 0.5s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
